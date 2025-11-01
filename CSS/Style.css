@@ -1,0 +1,327 @@
+/*==General ==*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:"poppins",sans-serif;
+    background-color: white;
+    color: black;
+    line-height: 1.6;
+}
+/*==Header==*/
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:black;
+    color: gold;
+    padding: 10px 50px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 150px;
+    height:150px;
+    border-radius: 80px;
+    margin-right: 20px;
+    border: 2px solid gold;
+
+}
+nav ul{
+    list-style: none;
+    display: flex;
+}
+nav ul li{
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav ul li a.active,
+nav ul li a:hover{
+    text-decoration: underline;
+    color: gold;
+}
+/*==Video banner==*/
+.banner{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+.banner video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.banner-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0,0.4);
+    padding: 30px;
+    border-radius: 10px;
+}
+.banner-text h1{
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+.banner h3{
+    font-style: italic;
+}
+.btn{
+    display:inline-block;
+    background:gold;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn:hover{
+    background: black;
+    color: gold;
+    border:1px solid gold;
+}
+/*==Service section==*/
+.services{
+    text-align: center;
+    padding: 60px 20px;
+
+}
+.services h2{
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: black;
+}
+.service-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.service-card{
+    width: 300px;
+    background:white;
+    margin: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+.service-card img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+.service-card img:hover{
+    transform: scale(1.05);
+}
+.service-card h3{
+    margin-top: 15px;
+    color: black;
+    font-size: 1.3em;
+}
+.service-card p{
+    margin: 10px 15px;
+    font-size: 0.95em;
+    color: dimgray;
+}
+
+.btn-small{
+    display: inline-block;
+    background: gold;
+    color:black;
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 0 15px;
+    transition: 0.3s;
+}
+.btn-small:hover{
+    background: black;
+    color: gold;
+    border:1px solid black;
+}
+
+/*==ABOUT PAGE==*/
+.about{
+    text-align: gold;
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+.about h2{
+    font-size: 2em;
+    color: black;
+    margin-bottom: 20px;
+}
+.mission p{
+    font-style: italic;
+}
+.mission img{
+    width: 80%;
+    max-width: 250px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.about p{
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: black;
+    line-height: 1.8;
+}
+.values{
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+    max-width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+.values li{
+    background: whitesmoke;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px lightgray;
+}
+
+/*==GALLERY PAGE==*/
+.gallery{
+    text-align: center;
+    padding: 60px 20px;
+}
+.gallery h2{
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+.gallery p{
+    margin-bottom:30px;
+    color: gray;
+    font-size: 1em;
+}
+.gallery-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 15px;
+    max-width: 1100px;
+    margin: auto;
+}
+.gallery-container img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s,box-shadow 0.3s;
+}
+.gallery-container img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px gray;
+}
+
+/*==Contact page==*/
+.contact{
+    text-align: center;
+    padding: 60px 20px;
+}
+.contact h2{
+    font-size:2em;
+    margin-bottom: 15px;
+}
+.contact p{
+    color: dimgray;
+    margin-bottom: 20px;
+}
+form{
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: left;
+}
+form label{
+    font-weight: 600;
+    color:black;
+    display: block;
+    margin-bottom: 5px;
+}
+form input,
+form textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    font-size: 1em;
+}
+button.btn{
+    width: 100%;
+    cursor: pointer;
+}
+.contact-img{
+    width: 80%;
+    max-width: 250px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.social-links{
+    margin-top: 25px;
+}
+.social-links a{
+    color: gold;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 5px;
+}
+.social-links a:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+/*==FOOTER==*/
+footer{
+    background: black;
+    color: gold;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.95em;
+}
+ /*==RESPONSIVENESS==*/
+ @media(max-width:760px){
+    .main-header{
+        flex-direction: column;
+        text-align: center;
+    }
+    .service-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner{
+        height: 60vh;
+    }
+    .banner-text h1{
+        font-size: 1.8em;
+    }
+    .btn,
+    .btn-small{
+        font-size: 0.9em;
+    }
+ }
